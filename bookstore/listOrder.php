@@ -44,6 +44,7 @@
                 <td>$row[TotalPrice]</td>
                 <td>$row[Status]</td>
                 <td>
+              
                     <a class='btn btn-danger btn-sm' href='deleteOrder.php?id=$row[OrderID]'>Delete</a>
                 </td>
              </tr>

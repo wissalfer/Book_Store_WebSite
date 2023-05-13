@@ -22,7 +22,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "USE bookstore";
+$sql = "USE booksstore";
 $conn->query($sql);
 
 $sql = "SELECT users.UserName, users.Password, customer.CustomerName, customer.CustomerIC, customer.CustomerEmail, customer.CustomerPhone, customer.CustomerGender, customer.CustomerAddress
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 													    die("Connection failed: " . $conn->connect_error);
 													} 
 
-													$sql = "USE bookstore";
+													$sql = "USE booksstore";
 													$conn->query($sql);
 
 													$sql = "UPDATE users SET UserName = '".$uname."', Password = '".$upassword."' WHERE UserID = "

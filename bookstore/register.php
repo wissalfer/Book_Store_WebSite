@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 													    die("Connection failed: " . $conn->connect_error);
 													} 
 
-													$sql = "USE bookstore";
+													$sql = "USE booksstore";
 													$conn->query($sql);
 
 													$sql = "INSERT INTO users(UserName, Password) VALUES('".$uname."', '".$upassword."')";

@@ -20,7 +20,7 @@ if(isset($_SESSION['id'])){
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 
-	$sql = "USE bookstore";
+	$sql = "USE booksstore";
 	$conn->query($sql);
 
 	$sql = "SELECT CustomerID from customer WHERE UserID = ".$_SESSION['id']."";
@@ -145,7 +145,7 @@ if(isset($_POST['submitButton'])){
 											    die("Connection failed: " . $conn->connect_error);
 											} 
 
-											$sql = "USE bookstore";
+											$sql = "USE booksstore";
 											$conn->query($sql);
 
 											$sql = "INSERT INTO customer(CustomerName, CustomerPhone, CustomerIC, CustomerEmail, CustomerAddress, CustomerGender) 
@@ -319,7 +319,7 @@ if(isset($_POST['submitButton'])){
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 
-	$sql = "USE bookstore";
+	$sql = "USE booksstore";
 	$conn->query($sql);
 
 	$sql = "SELECT customer.CustomerName, customer.CustomerIC, customer.CustomerGender, customer.CustomerAddress, customer.CustomerEmail, customer.CustomerPhone, book.BookTitle, book.Price, book.Image, `order`.`DatePurchase`, `order`.`Quantity`, `order`.`TotalPrice`

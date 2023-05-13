@@ -1,10 +1,11 @@
 <?php
+ include "connectDB.php";
 session_start();
 if(isset($_POST['username'])&&isset($_POST['pwd'])){
     $username=$_POST['username'];
     $pwd = $_POST['pwd'];
 
-    include "connectDB.php";
+   
      
      $sql="SELECT * FROM Users WHERE UserName=:username AND Password = :pwd;";
      $stmt = $pdo->prepare($sql);
@@ -18,7 +19,9 @@ if(isset($_POST['username'])&&isset($_POST['pwd'])){
             $_SESSION['id']=$row['UserID'];
              }
         
-        header("Location:index.php");
+        if($username=='admin'){header("Location:dashboard.php");}else{
+            header("Location:index.php");
+        }
         
     }else{
         echo '<span style="color: red;">Login Fail</span>';

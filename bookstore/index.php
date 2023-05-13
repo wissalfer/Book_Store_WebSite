@@ -16,7 +16,7 @@ session_start();
 		    die("Connection failed: " . $conn->connect_error);
 		} 
 
-		$sql = "USE bookstore";
+		$sql = "USE booksstore";
 		$conn->query($sql);
 
 		$sql = "SELECT * FROM book WHERE BookID = '".$_POST['ac']."'";
@@ -43,7 +43,7 @@ session_start();
 		    die("Connection failed: " . $conn->connect_error);
 		} 
 
-		$sql = "USE bookstore";
+		$sql = "USE booksstore";
 		$conn->query($sql);
 
 		$sql = "DELETE FROM cart";
@@ -60,7 +60,7 @@ session_start();
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 
-	$sql = "USE bookstore";
+	$sql = "USE booksstore";
 	$conn->query($sql);	
 
 	$sql = "SELECT * FROM book";
@@ -82,8 +82,8 @@ if(!isset($_SESSION['id'])){
 	echo '<header>';
 	echo '<blockquote>';
 	echo '<a href="index.php"><img src="image/book_logo3.png"></a>';
-	echo '<form class="hf" action="Register.php"><input class="hi" type="submit" name="submitButton" style=" background-color:rgb(104, 138, 173);" value="Register"></form>';
-	echo '<form class="hf" action="login.php"><input class="hi" type="submit" style=" background-color:rgb(104, 138, 173);" name="submitButton" value="Login"></form>';
+	echo '<form class="hf" action="Register.php"><input class="hi" type="submit" name="submitButton" style="width:120px; background-color:rgb(104, 138, 173);" value="Register"></form>';
+	echo '<form class="hf" action="login.php"><input class="hi" type="submit" style="width:120px; background-color:rgb(104, 138, 173);" name="submitButton" value="Login"></form>';
 	echo '</blockquote>';
 	echo '</header>';
 }
